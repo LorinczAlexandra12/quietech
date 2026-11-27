@@ -1,6 +1,6 @@
-# QT - Coming Soon Webpage
+# QuieTech - Coming Soon Webpage
 
-A modern, bilingual (English/Hungarian) coming soon webpage for QT Healthtech Innovation.
+A modern, bilingual (English/Hungarian) coming soon webpage for QuieTech Healthtech Innovation.
 
 ## Project Structure
 
@@ -18,7 +18,7 @@ web/
 
 ✨ **Bilingual Support**
 - English and Hungarian language switching
-- Automatic browser language detection
+- Hungarian by default
 - Language preference saved to localStorage
 
 📱 **Responsive Design**
@@ -32,10 +32,8 @@ web/
 - Professional color scheme
 
 📧 **Newsletter Subscription**
-- Email validation
-- Form submission handling
-- Success/error messages in both languages
-- Subscriptions stored locally (simulated backend)
+- Embedded Brevo signup form
+- Submissions are managed in the connected Brevo account
 
 📋 **Sections Included**
 1. **Navigation Bar** - Logo and language switcher
@@ -61,10 +59,12 @@ web/
 
 ### Newsletter Signup
 
-- Enter your email address in the subscription form
-- Click "Subscribe"
-- Success message will appear in your selected language
-- Emails are stored locally (not sent anywhere - no backend)
+- Visitors submit their email through the embedded Brevo form.
+- View contacts in the Brevo account and list connected to that form.
+- Configure the form text, consent, confirmation email, and any notifications in Brevo.
+  The embedded form has its own language and does not change with the site's language switcher.
+- Test with an address you control after deployment, and complete any confirmation
+  email if double opt-in is enabled. Verify the contact in Brevo.
 
 ## Customization
 
@@ -127,22 +127,17 @@ root; no build command or dependencies are required.
 You can also deploy from this folder with the Vercel CLI by running `vercel`
 and following its prompts.
 
-## No Backend Required
+## Hosting and external services
 
 This is a **fully static HTML webpage** with:
 - ✅ No server setup needed
-- ✅ No database required
+- ✅ No database is required for the website itself
 - ✅ No build step required for deployment
-- ✅ All functionality works in the browser
+- The Brevo signup form requires an internet connection and a Brevo account.
 
 ## Future Enhancements
 
-When you're ready to deploy:
-1. Replace the simulated form handling with a real backend service
-2. Add a real email service (Mailchimp, SendGrid, etc.)
-3. Host on a web server (GitHub Pages, Netlify, Vercel, etc.)
-4. Add tracking/analytics
-5. Integrate with CMS if needed
+Optional additions include analytics and a content management system.
 
 ## Technical Details
 
@@ -150,14 +145,11 @@ When you're ready to deploy:
 
 **LanguageSwitcher**
 - Manages language switching
-- Detects browser language
+- Defaults to Hungarian
 - Stores preference in localStorage
 
-**NewsletterForm**
-- Handles form submission
-- Validates email format
-- Shows success/error messages
-- Stores subscriptions locally
+**Brevo signup form**
+- Handles subscriptions in the connected Brevo account
 
 **ScrollAnimations**
 - Fade-in animations on scroll
@@ -167,7 +159,7 @@ When you're ready to deploy:
 
 - All translations are in Hungarian/English
 - The page is optimized for fast loading
-- No external dependencies (pure HTML/CSS/JS)
+- The website uses Google Fonts and the embedded Brevo form
 - Fully accessible with semantic HTML
 
 ## Support
@@ -176,5 +168,5 @@ For customization needs, check the HTML comments in `index.html` and CSS comment
 
 ---
 
-**Created for QT - Healthtech Innovation** 
+**Created for QuieTech - Healthtech Innovation** 
 © 2024 All rights reserved

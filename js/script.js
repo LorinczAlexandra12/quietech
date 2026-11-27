@@ -41,24 +41,14 @@ class ThemeSwitcher {
 
 class LanguageSwitcher {
     constructor() {
-        this.currentLang = localStorage.getItem('language') || 'en';
+        this.currentLang = localStorage.getItem('language') || 'hu';
         this.init();
     }
 
     init() {
-        this.detectBrowserLanguage();
         this.setupEventListeners();
         this.updateContent(this.currentLang);
-    }
-
-    detectBrowserLanguage() {
-        // If no saved language, detect from browser
-        if (!localStorage.getItem('language')) {
-            const browserLang = navigator.language.split('-')[0];
-            if (browserLang === 'hu') {
-                this.currentLang = 'hu';
-            }
-        }
+        this.updateActiveButton(this.currentLang);
     }
 
     setupEventListeners() {
@@ -79,7 +69,7 @@ class LanguageSwitcher {
 
     updateContent(lang) {
         // Update all elements with data-en and data-hu attributes
-        document.querySelectorAll('[data-en][data-hu]').forEach(element => {
+        document.querySelectorAll('[data-en][data-hu], [data-en-placeholder][data-hu-placeholder]').forEach(element => {
             const text = element.dataset[lang] || element.dataset.en;
             
             // Handle different element types
@@ -106,106 +96,6 @@ class LanguageSwitcher {
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.lang === lang);
         });
-    }
-}
-
-// ===========================
-// NEWSLETTER FORM
-// ===========================
-
-class NewsletterForm {
-    constructor() {
-        this.form = document.getElementById('newsletterForm');
-        this.messageEl = document.getElementById('formMessage');
-        this.init();
-    }
-
-    init() {
-        this.form.addEventListener('submit', (e) => this.handleSubmit(e));
-    }
-
-    async handleSubmit(e) {
-        e.preventDefault();
-
-        const email = this.form.querySelector('.email-input').value.trim();
-
-        // Basic validation
-        if (!this.isValidEmail(email)) {
-            this.showError('Please enter a valid email address');
-            return;
-        }
-
-        // Show loading state
-        this.showLoading();
-
-        try {
-            // Simulate form submission (since there's no backend)
-            await this.simulateSubmission(email);
-            this.showSuccess(email);
-            this.form.reset();
-        } catch (error) {
-            this.showError('Something went wrong. Please try again.');
-        }
-    }
-
-    isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
-    async simulateSubmission(email) {
-        // Simulate API call delay
-        return new Promise(resolve => {
-            setTimeout(() => {
-                // Store email in localStorage (simulating persistence)
-                this.storeEmail(email);
-                resolve();
-            }, 500);
-        });
-    }
-
-    storeEmail(email) {
-        const emails = JSON.parse(localStorage.getItem('subscribedEmails') || '[]');
-        if (!emails.includes(email)) {
-            emails.push(email);
-            localStorage.setItem('subscribedEmails', JSON.stringify(emails));
-        }
-    }
-
-    showLoading() {
-        this.messageEl.textContent = 'Subscribing...';
-        this.messageEl.className = '';
-        this.form.querySelector('.submit-btn').disabled = true;
-    }
-
-    showSuccess(email) {
-        const lang = document.documentElement.lang || 'en';
-        const messages = {
-            en: `Thanks for subscribing! We'll notify you when we launch.`,
-            hu: `Köszönjük a feliratkozást! Értesítünk, amikor elindulunk.`
-        };
-        
-        this.messageEl.textContent = messages[lang];
-        this.messageEl.className = 'success';
-        this.form.querySelector('.submit-btn').disabled = false;
-
-        // Reset message after 5 seconds
-        setTimeout(() => {
-            this.messageEl.textContent = '';
-            this.messageEl.className = '';
-        }, 5000);
-    }
-
-    showError(message) {
-        this.messageEl.textContent = message;
-        this.messageEl.className = 'error';
-        this.form.querySelector('.submit-btn').disabled = false;
-
-        // Reset message after 5 seconds
-        setTimeout(() => {
-            this.messageEl.textContent = '';
-            this.messageEl.className = '';
-        }, 5000);
     }
 }
 
@@ -273,9 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize language switcher
     const languageSwitcher = new LanguageSwitcher();
 
-    // Initialize newsletter form
-    new NewsletterForm();
-
     // Initialize scroll animations
     new ScrollAnimations();
 
@@ -295,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ===========================
 
 function getCurrentLanguage() {
-    return localStorage.getItem('language') || document.documentElement.lang || 'en';
+    return localStorage.getItem('language') || document.documentElement.lang || 'hu';
 }
 
 // ===========================

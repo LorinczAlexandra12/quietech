@@ -1,4 +1,4 @@
-# QT Coming Soon Webpage - Quick Start Guide
+# QuieTech Coming Soon Webpage - Quick Start Guide
 
 ## 📍 Location
 ```
@@ -26,7 +26,7 @@ Navigate to the web folder and double-click **index.html**
 
 ### ✅ Bilingual Support
 - **EN/HU button** in top-right corner
-- Auto-detects your browser language
+- Hungarian is the default language
 - Remembers your choice
 
 ### ✅ Sections Included
@@ -39,7 +39,7 @@ Navigate to the web folder and double-click **index.html**
 
 ### ✅ Interactive Features
 - Newsletter email validation
-- Language switching (all text translates)
+- Language switching (the Brevo form has its own language settings)
 - Smooth animations and hover effects
 - Fully responsive (mobile-friendly)
 
@@ -47,13 +47,10 @@ Navigate to the web folder and double-click **index.html**
 
 ## 📧 Newsletter Form
 
-The subscription form:
-- ✅ Validates email format
-- ✅ Shows success/error messages
-- ✅ Stores emails locally (no backend)
-- ✅ Works in both languages
-
-**Try it:** Enter an email, click Subscribe, see success message!
+The embedded Brevo form sends subscriptions to the connected Brevo account.
+Configure its text, consent, confirmation email, and any notifications in Brevo.
+After deploying, test with an address you control, complete any confirmation
+email, and verify that the contact appears in the intended Brevo list.
 
 ---
 
@@ -122,7 +119,7 @@ web/
 
 ### No Backend Needed!
 - Pure HTML/CSS/JavaScript
-- Works offline
+- The signup form requires an internet connection
 - No server required
 - Just open the file!
 
@@ -153,16 +150,16 @@ web/
 ## ❓ Common Questions
 
 **Q: Can I see it without internet?**
-A: Yes! This website works completely offline.
+A: The page can be opened locally, but the Brevo form requires internet access.
 
-**Q: How do I change the language automatically?**
-A: Edit `script.js` line ~18 to change default language.
+**Q: How do I change the default language?**
+A: Change the default language in `js/script.js` and the initial content in `index.html`.
 
 **Q: Can I add images?**
 A: Yes! Add images to the `images/` folder and reference them in `index.html`.
 
 **Q: How do emails get sent?**
-A: Right now they're just stored locally (browser storage). When you're ready for real backend, we can integrate an email service like Mailchimp.
+A: Brevo stores submissions in the list connected to the form. Configure confirmation emails and notifications in your Brevo account.
 
 **Q: What if I need more sections?**
 A: Copy one of the existing sections in `index.html` and customize it!
@@ -180,10 +177,10 @@ For questions or customization:
 
 ## ✨ You're All Set!
 
-Your QT coming soon webpage is ready to use! 🎉
+Your QuieTech coming soon webpage is ready to use! 🎉
 
 Just open **index.html** and start promoting your healthtech innovation!
 
 ---
 
-**Made with ❤️ for QT - Healthtech Innovation**
+**Made with ❤️ for QuieTech - Healthtech Innovation**
