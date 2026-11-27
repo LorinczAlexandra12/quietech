@@ -1,0 +1,189 @@
+# QT Coming Soon Webpage - Quick Start Guide
+
+## 📍 Location
+```
+D:\Susu\Msc - MBA\3. félév\Vállalkozásindítás\web\
+```
+
+## 🚀 How to Open
+
+### Option 1: Double-click (Easiest)
+Navigate to the web folder and double-click **index.html**
+
+### Option 2: Right-click > Open with Browser
+1. Right-click `index.html`
+2. Select "Open with" → Your browser
+
+### Option 3: Browser address bar
+1. Open your browser
+2. Press Ctrl+L (or click the address bar)
+3. Paste: `file:///D:/Susu/Msc%20-%20MBA/3.%20félév/Vállalkozásindítás/web/index.html`
+4. Press Enter
+
+---
+
+## 🎯 Key Features at a Glance
+
+### ✅ Bilingual Support
+- **EN/HU button** in top-right corner
+- Auto-detects your browser language
+- Remembers your choice
+
+### ✅ Sections Included
+1. **Navigation** - Logo + language switcher
+2. **Hero** - Company tagline & value prop
+3. **CTA** - Newsletter signup form
+4. **Features** - 3 key benefits with icons
+5. **Contact** - Email, social links, team info
+6. **Footer** - Copyright & status
+
+### ✅ Interactive Features
+- Newsletter email validation
+- Language switching (all text translates)
+- Smooth animations and hover effects
+- Fully responsive (mobile-friendly)
+
+---
+
+## 📧 Newsletter Form
+
+The subscription form:
+- ✅ Validates email format
+- ✅ Shows success/error messages
+- ✅ Stores emails locally (no backend)
+- ✅ Works in both languages
+
+**Try it:** Enter an email, click Subscribe, see success message!
+
+---
+
+## 🎨 Customization Quick Tips
+
+### Change Text
+Edit `index.html` and find elements with:
+```html
+data-en="English version" data-hu="Magyar verzió"
+```
+
+### Change Colors
+Edit `css/style.css` variables at the top:
+```css
+--primary-color: #1a1a2e;      /* Main color */
+--highlight-color: #e94560;    /* Pink accent */
+```
+
+### Update Team Names
+In `index.html`, find the Contact section:
+```html
+<ul class="team-list">
+    <li>Barkóczi Alexandra</li>
+    <li>Kuvik Ádám</li>
+    <li>Bercsényi Tamás</li>
+</ul>
+```
+
+### Update Email
+Find this line in `index.html`:
+```html
+<a href="mailto:contact@qt-health.com" class="contact-link">contact@qt-health.com</a>
+```
+
+---
+
+## 📱 Testing Responsiveness
+
+### Desktop
+- Open in full browser window
+- See all sections side-by-side
+
+### Tablet
+- Resize browser window to ~1024px wide
+- Or test on tablet device
+
+### Mobile
+- Resize to ~375px wide
+- Or open on smartphone
+
+**Pro tip:** Press F12 in browser → Toggle Device Toolbar to see all sizes
+
+---
+
+## 🔧 Technical Details
+
+### Files Created
+```
+web/
+├── index.html          (7.79 KB)
+├── css/style.css       (10.38 KB)
+├── js/script.js        (7.98 KB)
+├── README.md           (4.36 KB)
+└── images/             (ready for future assets)
+```
+
+### No Backend Needed!
+- Pure HTML/CSS/JavaScript
+- Works offline
+- No server required
+- Just open the file!
+
+---
+
+## 🚀 When Ready to Deploy
+
+### Free Hosting Options
+
+#### GitHub Pages (Easiest)
+1. Create GitHub repo
+2. Push web folder
+3. Enable Pages in settings
+4. Live in 2 minutes!
+
+#### Netlify
+1. Go to netlify.com
+2. Drag & drop `web` folder
+3. Auto-deployed!
+
+#### Vercel
+1. Go to vercel.com
+2. Connect GitHub repo
+3. Auto-deployed!
+
+---
+
+## ❓ Common Questions
+
+**Q: Can I see it without internet?**
+A: Yes! This website works completely offline.
+
+**Q: How do I change the language automatically?**
+A: Edit `script.js` line ~18 to change default language.
+
+**Q: Can I add images?**
+A: Yes! Add images to the `images/` folder and reference them in `index.html`.
+
+**Q: How do emails get sent?**
+A: Right now they're just stored locally (browser storage). When you're ready for real backend, we can integrate an email service like Mailchimp.
+
+**Q: What if I need more sections?**
+A: Copy one of the existing sections in `index.html` and customize it!
+
+---
+
+## 📞 Support
+
+For questions or customization:
+1. Check the HTML file - all sections are well-commented
+2. Review the README.md in the web folder
+3. The CSS has detailed section comments
+
+---
+
+## ✨ You're All Set!
+
+Your QT coming soon webpage is ready to use! 🎉
+
+Just open **index.html** and start promoting your healthtech innovation!
+
+---
+
+**Made with ❤️ for QT - Healthtech Innovation**
