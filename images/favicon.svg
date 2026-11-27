@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#DFC08A" stroke-opacity=".3" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="23" fill="none" stroke="#DFC08A" stroke-opacity=".5" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="18" fill="none" stroke="#DFC08A" stroke-opacity=".8" stroke-width="2"/>
+  <circle cx="32" cy="32" r="15" fill="#DFC08A" fill-opacity=".1"/>
+  <text x="32" y="35" text-anchor="middle" font-size="10" fill="#DFC08A" fill-opacity=".7">♡</text>
+</svg>

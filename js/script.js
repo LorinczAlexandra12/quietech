@@ -85,8 +85,8 @@ class LanguageSwitcher {
 
         // Update page title
         document.title = lang === 'hu' 
-            ? 'QT - Egészségtechnológiai Innováció | Hamarosan Érkezik'
-            : 'QT - Healthtech Innovation | Coming Soon';
+            ? 'QuieTech - Egészségtechnológiai Innováció | Hamarosan érkezik'
+            : 'QuieTech - Healthtech Innovation | Coming Soon';
 
         // Update HTML lang attribute
         document.documentElement.lang = lang;
@@ -189,4 +189,4 @@ function getCurrentLanguage() {
 // TRACK NEWSLETTER SUBSCRIPTIONS (for debugging)
 // ===========================
 
-console.log('QT Coming Soon - Page loaded successfully');
+console.log('QuieTech Coming Soon - Page loaded successfully');

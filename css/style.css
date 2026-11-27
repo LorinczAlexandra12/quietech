@@ -125,10 +125,20 @@ button {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
     letter-spacing: 2px;
+}
+
+.logo-mark {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    color: var(--accent-color);
 }
 
 .language-switcher {
@@ -316,6 +326,12 @@ html[data-theme="dark"] .sun-icon {
     justify-content: center;
     align-items: center;
     padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero-visual {
+        align-self: stretch;
+    }
 }
 
 .ring-illustration {
