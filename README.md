@@ -52,11 +52,7 @@ web/
 1. **Local Development:**
    - Simply open `index.html` in your web browser
    - No server required!
-
-2. **File Path:**
-   ```
-   D:\Susu\Msc - MBA\3. félév\Vállalkozásindítás\web\index.html
-   ```
+  ```
 
 ### Language Switching
 
@@ -111,12 +107,32 @@ Update the email and social links in the Contact section:
 ✅ Safari (latest)
 ✅ Mobile browsers
 
+## Deployment
+
+This repository is configured for Vercel as a static site. It serves `index.html`
+and the referenced `css/`, `js/`, and `images/` files directly from the project
+root; no build command or dependencies are required.
+
+### Deploy with Vercel
+
+1. Push this repository to GitHub, GitLab, or Bitbucket.
+2. In Vercel, choose **Add New → Project** and import the repository.
+3. If prompted, set the **Root Directory** to the folder containing `vercel.json`
+   and `index.html`.
+4. Leave the build settings at their defaults; `vercel.json` specifies the static
+   output directory and disables a framework build.
+5. Select **Deploy**. Future pushes to the connected production branch deploy
+   automatically.
+
+You can also deploy from this folder with the Vercel CLI by running `vercel`
+and following its prompts.
+
 ## No Backend Required
 
 This is a **fully static HTML webpage** with:
 - ✅ No server setup needed
 - ✅ No database required
-- ✅ No deployment necessary (just open the HTML file)
+- ✅ No build step required for deployment
 - ✅ All functionality works in the browser
 
 ## Future Enhancements
@@ -146,21 +162,6 @@ When you're ready to deploy:
 **ScrollAnimations**
 - Fade-in animations on scroll
 - Uses Intersection Observer API
-
-## Quick Deploy Options (When Ready)
-
-### Option 1: GitHub Pages
-1. Push to GitHub
-2. Enable Pages in settings
-3. Done!
-
-### Option 2: Netlify
-1. Drag & drop the `web` folder
-2. Auto-deployed
-
-### Option 3: Vercel
-1. Connect repository
-2. Auto-deployed
 
 ## Notes
 
